@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from .utils.nl_sql import sql_chain
+from django.views.decorators.csrf import csrf_exempt  
 
+@csrf_exempt
 def nl_sql_executor(request):
     if request.method == "POST":
         nl = request.POST.get("nl", "")
