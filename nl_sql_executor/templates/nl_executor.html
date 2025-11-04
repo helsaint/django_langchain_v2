@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,85 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <h1>Budget Overview 2025</h1>
+    <div class="dashboard-grid">
+        <div class="dashboard-item col-span-33">
+            <h3>Total Budget 2025</h3>
+            <p>The Total Budgeted for 2025 is GYD 1,382,150,486,000.</p>
+        </div>
+
+        <div class="dashboard-item col-span-33">
+            <h3>Total OPEX Budget 2025</h3>
+            <p>The Total OPEX Budgeted for 2025 is GYD 644,469,923,000.</p>
+        </div>
+
+        <div class="dashboard-item col-span-33">
+            <h3>Total CAPEX Budget 2025</h3>
+            <p>The Total CAPEX Budgeted for 2025 is GYD 737,680,563,000.</p>
+            <p>The government is undertaking 185 major projects.</p>
+        </div>
+
+        <div class="dashboard-item col-span-50">
+            <h3>CAPEX/OPEX Distribution</h3>
+            <iframe title="chart 1" src="{% static 'charts/chart_1.html' %}" width="100%" height="600"></iframe>
+            <p>Guyana as a developing nation requires heavy CAPEX investments. Thanks to 
+                the oil revenues the government has been able to significantly increase 
+                its CAPEX budget over the last few years. In 2025 CAPEX accounts for 53% 
+                of the total budget, a trend that is likely to continue for the next few years
+                as the government focuses on infrastructure development to support the 
+                growing economy.
+            </p>
+            </div>
+
+        <div class="dashboard-item col-span-50">
+            <h3>CAPEX/OPEX Trends</h3>
+            <iframe title="chart 2" src="{% static 'charts/chart_2.html' %}" width="100%" height="600"></iframe>
+            <p>In 2023 OPEX spending dominated however by 2024 and in 2025 the spending on CAPEX significantly 
+                increased, by 117% in 2024 and again by 22% in 2025. This shows a conscious 
+                effort to prioritize long term investment in infrastructure. However, this 
+                increase in infrastructure will result in greater OPEX expenditure in the 
+                future to at the very least maintain the new infrastructure.</p>
+        </div>
+
+        <div class="dashboard-item col-span-90">
+            <h3>Ranked List of Ministries by spending</h3>
+            <iframe title="chart 3" src="{% static 'charts/chart_3.html' %}" width="100%" height="600"></iframe>
+            <p>We can see.</p>
+        </div>
+    </div>
+
+    <h1>Sectoral & Program Analysis</h1>
+    <div class="dashboard-grid">
+        <div class="dashboard-item col-span-90">
+            <h3>Primary KPI (90% Width)</h3>
+        </div>
+
+        <div class="dashboard-item col-span-33">
+            <h3>Chart A (33%)</h3>
+        </div>
+        <div class="dashboard-item col-span-33">
+            <h3>Chart B (33%)</h3>
+        </div>
+        <div class="dashboard-item col-span-33">
+            <h3>Chart C (33%)</h3>
+        </div>
+        
+        <div class="dashboard-item col-span-50">
+            <h3>Map View (50%)</h3>
+        </div>
+        <div class="dashboard-item col-span-50">
+            <h3>List Data (50%)</h3>
+        </div>
+        
+        <div class="dashboard-item col-span-25">
+            <h3>Mini Chart (25%)</h3>
+        </div>
+        <div class="dashboard-item">
+            <h3>Default Item (33%)</h3>
+        </div>
+    </div>
+
+    
     <h1>NL SQL Executor</h1>
     <form id="sqlForm">
         <textarea id="sqlCommand" name="nl" placeholder="Ask your question..."></textarea>

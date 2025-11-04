@@ -1,3 +1,75 @@
+/* --- Base Grid Container & Item Styles --- */
+.dashboard-grid {
+    display: grid;
+    gap: 20px; 
+    padding: 20px;
+    
+    /* Dynamic width definition */
+    max-width: 1400px; 
+    width: 90vw; 
+    margin: 20px auto; 
+}
+
+.dashboard-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 1. Mobile-First Layout (Default: 100% Width) --- */
+.dashboard-grid {
+    grid-template-columns: 1fr; /* Single column */
+}
+/* Ensure ALL items span 1 column by default */
+.dashboard-item {
+    grid-column: span 1; 
+}
+
+
+/* --- 2. Tablet Layout (768px+): 6-Column Grid --- */
+@media (min-width: 768px) {
+    .dashboard-grid {
+        /* Set the base grid to 6 columns */
+        grid-template-columns: repeat(6, 1fr); 
+    }
+    
+    /* Redefine default item width for tablet (optional, e.g., 50%) */
+    /* If you want the default item to be 50% on tablet, uncomment the line below: */
+    /* .dashboard-item { grid-column: span 3; } */
+
+    /* Tablet Spans (defined relative to the 6-column grid) */
+    .col-span-90 { grid-column: span 6; } /* 100% */
+    .col-span-50 { grid-column: span 3; } /* 50% */
+    .col-span-33 { grid-column: span 2; } /* 33.3% */
+    .col-span-25 { grid-column: span 2; } /* Note: 25% isn't clean on a 6-col grid */
+}
+
+
+/* --- 3. Desktop Layout (1200px+): 12-Column Grid --- */
+@media (min-width: 1200px) {
+    .dashboard-grid {
+        /* CRITICAL: Override the 6-column grid and set the base to 12 columns */
+        grid-template-columns: repeat(12, 1fr); 
+    }
+    
+    /* CRITICAL: Reset the base item width to span 1 column unless a utility class is present. */
+    /* This ensures specificity doesn't lock items to the 768px span definition. */
+    .dashboard-item {
+        grid-column: span 1; 
+    }
+
+
+    /* Desktop Spans (defined relative to the 12-column grid) */
+    .col-span-90 { grid-column: span 11; } /* ~91.6% (Close to 90%) */
+    .col-span-50 { grid-column: span 6; } /* 50% */
+    .col-span-33 { grid-column: span 4; } /* 33.3% */
+    .col-span-25 { grid-column: span 3; } /* 25% */
+}
+
+/*
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -12,6 +84,7 @@ textarea {
     padding: 10px;
     font-family: monospace;
 }
+*/
 
 button {
     padding: 10px 15px;
@@ -25,6 +98,7 @@ button {
     margin-top: 20px;
 }
 
+/*
 table {
     width: 100%;
     border-collapse: collapse;
@@ -39,8 +113,10 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+*/
 
 .error {
     color: red;
     padding: 10px;
 }
+
