@@ -71,6 +71,36 @@
     <h1>Sectoral & Program Analysis</h1>
     <div class="dashboard-grid">
         <div class="dashboard-item col-span-90">
+            <h3>Programme Overview</h3>
+            <iframe title="chart 4" src="{% static 'charts/chart_4.html' %}" width="100%" height="600"></iframe>
+            <p>
+                We see that most Infrastructure programmes are under Ministry of Public Works 
+                and the PM's office and is dominated by CAPEX spending. This makes sense as 
+                the PM's office is in charge of the gas to energy project. We also see that 
+                many social services are distributed among many agencies. While the main 
+                ministries get the bulk of the financing, smaller agencies also share some 
+                of these responsibilities.
+            </p>
+        </div>
+
+        <div class="dashboard-item col-span-90">
+            <h3>Programme Trends</h3>
+            <iframe title="chart 5" src="{% static 'charts/chart_5.html' %}" width="100%" height="600"></iframe>
+            <p>
+                We are limiting our view only to those government agencies that account 
+                for at least 2% of total government budget. What our graph above shows is 
+                that there is almost one-to-one relationship between government agencies and 
+                category of programmes they engage with. This provides clarity in 
+                responsibilities and focuses an agency on specific tasks.</p>
+                <p>We also see that the Ministry of Finance is the main contributor to 
+                    "General Administration & Governance". This ministry therefore has 
+                    overall responsibility for running the state machinery.</p>
+
+            </p>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="dashboard-item col-span-90">
             <h3>Primary KPI (90% Width)</h3>
         </div>
 
