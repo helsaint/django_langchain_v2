@@ -95,7 +95,43 @@
                     "General Administration & Governance". This ministry therefore has 
                     overall responsibility for running the state machinery.</p>
             </p>
-        </div>  
+        </div>
+        
+        <div class="dashboard-item col-span-50">
+            <h3>Concentration Index (per Ministry)</h3>
+            <iframe title="chart 6" src="{% static 'charts/chart_6.html' %}" width="100%" height="600"></iframe>
+            <p>
+                To show the degree of concentration of spending per ministry, 
+                we use the Herfindahl-Hirschman Index (HHI). The HHI is usually used
+                in to measure the concentration of firms in a market to show the presence
+                of monopolies. However, we can also use it to measure the concentration 
+                of spendingwithin a ministry. 
+            </p>
+            <p>
+                Values closer to 1 will tell us which ministries/agencies are functionally
+                specialized, focusing on a few key programmes. Values closer to 0 will indicate
+                which ministries/agencies have are multi-sectoral and have a wide range of 
+                responsibilities and power.             
+            </p>
+        </div>
+
+        <div class="dashboard-item col-span-50">
+            <h3>Programme Group Overlap</h3>
+            <iframe title="chart 6" src="{% static 'charts/chart_6.html' %}" width="100%" height="600"></iframe>
+            <p>
+                Here we show how many government agencies/ministries share responsibilities
+                for programmes that are similar. As is to be expected functions of general 
+                administrtion and governance will be shared since each agency has to manage
+                its own internal affairs.
+            </p>
+            <p>
+                There are however some overlaps that can lead to inefficiencies. We see that
+                several agencies are involved in "health & social protection", "education &
+                human capital development" and "agri., fisheries & agro services". There will
+                likely be duplication of functions and responsibilities as well as conflicting
+                priorities.
+            </p>
+        </div>
     </div>
 
     <div class="dashboard-grid">
